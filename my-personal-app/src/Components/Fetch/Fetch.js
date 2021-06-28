@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
-import { Table, Container, Row, Col } from 'react-bootstrap';
-import CountryServices from '../../services/CountryServices';
+import React, { useEffect, useState } from "react";
+import { Table, Container, Row, Col } from "react-bootstrap";
+import DataTable from "react-data-table-component";
+import CountryServices from "../../services/CountryServices";
 
 const countryServices = new CountryServices();
 
 const Fetch = () => {
-
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -20,38 +20,50 @@ const Fetch = () => {
         setCountries(res.data);
       }
     } catch (err) {
-      console.log('The error in fetch component: ', err)
+      console.log("The error in fetch component: ", err);
     }
     console.log(countries);
   };
 
-  const listCountries = countries.map((country, item) =>
-    <tr key={item}>
-      <td>{item}</td>
-      <td>{country.name}</td>
-      <td>{country.capital}</td>
-      <td>{country.population}</td>
-    </tr>
-  );
+  const columns = [
+    {
+      name: "Country Name",
+      selector: "countryName",
+      sortable: false,
+      cell: row => <span>{row.name}</span>,
+      center: true
+    },
+    {
+      name: "Capital Name",
+      selector: "capitalName",
+      sortable: false,
+      cell: row => <span>{row.capital}</span>,
+      center: true
+    },
+    {
+      name: "Region",
+      selector: "region ",
+      sortable: false,
+      cell: row => <span>{row.population}</span>,
+      center: true
+    },
+  ];
 
   return (
     <div>
       <Container fluid>
         <Row>
           <Col xs={7}>
-            <Table striped bordered hover variant="dark">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Country Name</th>
-                  <th>Capital Name</th>
-                  <th>Region</th>
-                </tr>
-              </thead>
-              <tbody>
-                {listCountries}
-              </tbody>
-            </Table>
+            <DataTable
+              className="event-list-table"
+              columns={columns}
+              data={countries}
+              theme="light"
+              noHeader
+              pagination
+              striped
+              paginationPerPage={20}
+            />
           </Col>
           <Col xs={5}>I have to write a description here</Col>
         </Row>

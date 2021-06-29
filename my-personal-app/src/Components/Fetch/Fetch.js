@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import DataTable from "react-data-table-component";
 import CountryServices from "../../services/CountryServices";
 

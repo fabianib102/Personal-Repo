@@ -10,6 +10,7 @@ const Fetch = () => {
 
   useEffect(() => {
     getCountries();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getCountries = async () => {
@@ -52,6 +53,7 @@ const Fetch = () => {
   return (
     <div>
       <Container fluid>
+        <p>This is setion retrieve data of different countries</p>
         <Row>
           <Col xs={7}>
             <DataTable

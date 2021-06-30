@@ -18,7 +18,6 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <p>This is setion retrieve data of different countries</p>
       <Fetch />
     </div>
   );

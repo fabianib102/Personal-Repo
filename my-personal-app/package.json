@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test-cypress": "npx cypress open"
+    "test-ct": "npx cypress open-ct"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +41,10 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@cypress/react": "^5.9.1",
+    "@cypress/webpack-dev-server": "^1.4.0",
+    "cypress": "^7.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
 }

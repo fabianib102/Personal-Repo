@@ -1,24 +1,32 @@
 import './App.css';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import Header from './Components/Header/Header';
 import Fetch from './Components/Fetch/Fetch';
+import Skills from './Components/Skills/Skills';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
+
+  const routes = (
+    <Switch>
+      <Route exact path="/">
+        <Fetch />
+      </Route>
+      <Route exact path="/skills">
+        <Skills />
+      </Route>
+    </Switch>
+  );
+
   return (
     <div className="App">
-      <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand href="#example">Examples</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="tables">Fetch examples of countries</Nav.Link>
-              <Nav.Link href="skills">Skills</Nav.Link>
-              <Nav.Link href="other-codes">Som  e other code</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <Fetch />
+      <Router>
+        <Header />
+        {routes}
+      </Router>
     </div>
   );
 }

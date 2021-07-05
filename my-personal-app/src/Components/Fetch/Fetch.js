@@ -48,6 +48,13 @@ const Fetch = () => {
       cell: row => <span>{row.population}</span>,
       center: true
     },
+    {
+      name: "Details",
+      selector: "detail",
+      sortable: false,
+      cell: row => <span href="">Detail</span>,
+      center: true
+    },
   ];
 
   return (

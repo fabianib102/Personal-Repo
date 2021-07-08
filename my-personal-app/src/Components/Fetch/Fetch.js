@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import DataTable from "react-data-table-component";
 import CountryServices from "../../services/CountryServices";
+import { Link } from 'react-router-dom';
 
 const countryServices = new CountryServices();
 
@@ -52,7 +53,7 @@ const Fetch = () => {
       name: "Details",
       selector: "detail",
       sortable: false,
-      cell: row => <span href="">Detail</span>,
+      cell: row => <Link to={`/country/${row.alpha3Code}`}>Detail</Link>,
       center: true
     },
   ];

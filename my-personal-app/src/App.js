@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Fetch from './Components/Fetch/Fetch';
 import Skills from './Components/Skills/Skills';
+import DetailCountry from './Components/DetailCountry/DetailCountry';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,6 +15,9 @@ function App() {
     <Switch>
       <Route exact path="/">
         <Fetch />
+      </Route>
+      <Route exact path="/country/:code">
+        <DetailCountry />
       </Route>
       <Route exact path="/skills">
         <Skills />

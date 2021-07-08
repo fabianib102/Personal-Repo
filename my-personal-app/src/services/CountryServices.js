@@ -9,4 +9,8 @@ export default class CountryServices {
     return this.apiServices.get('https://restcountries.eu/rest/v2/all');
   };
 
+  getByCode = (code) => {
+    return this.apiServices.get(`https://restcountries.eu/rest/v2/alpha/${code}`);
+  }
+
 }

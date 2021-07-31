@@ -13,7 +13,7 @@ function App() {
   const routes = (
     <Switch>
       <PrivateRouter exact path="/" component={Fetch} />
-      <Route exact path="/country/:code" component={DetailCountry} />
+      <PrivateRouter exact path="/country/:code" component={DetailCountry} />
       <Route exact path="/skills" component={Skills} />
       <Route exact path="/login" component={Login} />
     </Switch>

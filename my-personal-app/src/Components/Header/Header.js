@@ -10,7 +10,7 @@ function Header() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand><Link to="/">Examples</Link></Navbar.Brand>
+        <Navbar.Brand><Link to="/">Demo React</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Link className="nav-link" to="/">List of countries</Link>

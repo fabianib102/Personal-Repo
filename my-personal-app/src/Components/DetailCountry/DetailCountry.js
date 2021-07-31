@@ -83,7 +83,7 @@ function DetailCountry() {
                         {borderComponent(detail.borders)}
                       </p>
                       <p className="mb-1">Currencies:</p>
-                      <ol class="list-group list-group-numbered">
+                      <ol className="list-group list-group-numbered">
                         {currenciesComponent(detail.currencies)}
                       </ol>
                     </div>

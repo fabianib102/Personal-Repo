@@ -2,10 +2,8 @@ const axios = require('axios').default;
 
 export default class ApiServices {
 
-  client;
-
-  constructor(baseUrl, headers) {
-    this.client = axios.create({baseUrl, headers});
+  constructor(headers) {
+    this.client = axios.create({headers});
   }
 
   get = (endpoint)=>{

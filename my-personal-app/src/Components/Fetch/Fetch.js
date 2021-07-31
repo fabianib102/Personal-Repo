@@ -75,7 +75,7 @@ const Fetch = () => {
               paginationPerPage={20}
             />
           </Col>
-          <Col xs={5}>In this section, I get the list of countries to displaying with DataTable package that handles all features a table has, also I use axios package with a service class to works retreiving data</Col>
+          <Col xs={5}>In this section, I get the list of countries to displaying with DataTable package that handles all features a table has, also I use axios package with a class service to works retrieving data</Col>
         </Row>
       </Container>
     </div>

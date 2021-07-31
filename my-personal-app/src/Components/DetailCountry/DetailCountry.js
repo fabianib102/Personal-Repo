@@ -26,8 +26,8 @@ function DetailCountry() {
 
   const borderComponent = (borders) => {
     return borders && borders.length > 0
-      ? borders.map((country) => (
-          <Badge bg="info" pill>
+      ? borders.map((country, i) => (
+          <Badge bg="info" pill key={i}>
             {country}
           </Badge>
         ))
@@ -37,8 +37,8 @@ function DetailCountry() {
 
   const currenciesComponent = (currencies) => {
     return currencies && currencies.length > 0
-      ? currencies.map((currency) => (
-        <li className="list-group-item d-flex justify-content-between align-items-start">
+      ? currencies.map((currency, i) => (
+        <li className="list-group-item d-flex justify-content-between align-items-start" key={i}>
           <div className="ms-2 me-auto">
             <div className="fw-bold">Name: {currency.name}</div>
           </div>
@@ -51,7 +51,7 @@ function DetailCountry() {
   return (
     <div>
       <Container fluid>
-        <div class="row">
+        <div className="row">
           <div className="col-1">
             <Link to={`/`} variant="outline-primary" className="btn btn-primary btn-sm">
               Back

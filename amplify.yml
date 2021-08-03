@@ -1,12 +1,12 @@
 version: 1
-test:
-  artifacts:
-    baseDirectory: cypress
-    configFilePath: "**/mochawesome.json"
-    files:
-      - "**/*.png"
-      - "**/*.mp4"
-      - "./report/mochawesome-report/*.json"
+# test:
+#   artifacts:
+#     baseDirectory: cypress
+#     configFilePath: "**/mochawesome.json"
+#     files:
+#       - "**/*.png"
+#       - "**/*.mp4"
+#       - "./report/mochawesome-report/*.json"
   phases:
     preTest:
       commands:

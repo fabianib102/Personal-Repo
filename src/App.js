@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./Components/Header/Header";
 import Fetch from "./Components/Fetch/Fetch";
-import Skills from "./Components/Skills/Skills";
+import Lift from "./Components/Lift/Lift";
 import DetailCountry from "./Components/DetailCountry/DetailCountry";
 import PrivateRouter from "./Components/PrivateRouter/PrivateRouter";
 import Login from "./Components/Login/Login";
@@ -14,7 +14,7 @@ function App() {
     <Switch>
       <PrivateRouter exact path="/" component={Fetch} />
       <PrivateRouter exact path="/country/:code" component={DetailCountry} />
-      <Route exact path="/skills" component={Skills} />
+      <Route exact path="/skills" component={Lift} />
       <Route exact path="/login" component={Login} />
     </Switch>
   );
